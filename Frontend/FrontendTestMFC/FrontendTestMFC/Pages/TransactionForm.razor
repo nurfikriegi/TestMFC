@@ -1,0 +1,52 @@
+﻿@using FrontendTestMFC.Model
+
+<div class="center border rounded px-3 py-3 mx-auto" style="margin-top: 50px; width: 900px;">
+    <div style="text-align: center">
+        <h1>INPUT DATA</h1>
+    </div>
+    <EditForm Model="@transactionModel">
+        <div class="mb-3">
+            <label for="agreement_number" class="form-label">Agreement Number</label>
+            <InputText id="agreement_number" class="form-control" @bind-Value="transactionModel.agreement_number" />
+        </div>
+        <div class="mb-3">
+            <label for="bpkb_no" class="form-label">Bpkb No</label>
+            <InputText id="bpkb_no" class="form-control" @bind-Value="transactionModel.bpkb_no" />
+        </div>
+        <div class="mb-3">
+            <label for="branch_id" class="form-label">Branch Id</label>
+            <InputText id="branch_id" class="form-control" @bind-Value="transactionModel.branch_id" />
+        </div>
+        <div class="mb-3">
+            <label for="bpkb_date" class="form-label">Bpkb Date</label>
+            <input type="date" id="bpkb_date" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="faktur_no" class="form-label">Faktur No</label>
+            <InputText id="faktur_no" class="form-control" @bind-Value="transactionModel.faktur_no" />
+        </div>
+        <div class="mb-3">
+            <label for="faktur_date" class="form-label">Faktur Date</label>
+            <input type="date" id="faktur_date" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="location_id" class="form-label">Location Id</label>
+            <InputText id="location_id" class="form-control" @bind-Value="transactionModel.location_id" />
+        </div>
+        <div class="mb-3">
+            <label for="bpkb_date_in" class="form-label">Bpkb Date In</label>
+            <input type="date" id="bpkb_date_in" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="police_no" class="form-label">Police No</label>
+            <InputText id="police_no" class="form-control" @bind-Value="transactionModel.police_no" />
+        </div>
+        <div class="mb-3 d-grid">
+            <button name="submit" type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private TransactionModel transactionModel = new TransactionModel();
+}
